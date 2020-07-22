@@ -7,4 +7,13 @@ var mySwiper = new Swiper(".swiper-container", {
         nextEl: ".slider-button--next",
         prevEl: ".slider-button--prev",
     },
+    speed: 450,
+    grabCursor: true,
+    autoplay: {
+        delay: 5000,
+    },
+    keyboard: {
+        enabled: true,
+        onlyInViewport: false,
+    },
 });
