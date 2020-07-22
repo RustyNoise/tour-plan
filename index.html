@@ -11,6 +11,26 @@
     <!-- Font Nunito-->
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=<01158ef4-44ab-45e3-aafa-58ebd8c3e649>&lang=ru_RU" type="text/javascript"></script>
+    <script type="text/javascript">
+        // Функция ymaps.ready() будет вызвана, когда
+        // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+        ymaps.ready(init);
+
+        function init() {
+            // Создание карты.
+            var myMap = new ymaps.Map("map", {
+                // Координаты центра карты.
+                // Порядок по умолчанию: «широта, долгота».
+                // Чтобы не определять координаты центра карты вручную,
+                // воспользуйтесь инструментом Определение координат.
+                center: [32.12509823, -80.79359886],
+                // Уровень масштабирования. Допустимые значения:
+                // от 0 (весь мир) до 19.
+                zoom: 13,
+            });
+        }
+    </script>
 </head>
 
 <body>
@@ -184,8 +204,7 @@
                     </div>
                     <!-- /.booking -->
                     <div class="map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3378.3890119705256!2d-80.76139808530998!3d32.139799123509675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88fc791b7607191b%3A0x98f2b586ea9394e7!2sGrand%20Hilton%20Head%20Inn%2C%20Ascend%20Hotel%20Collection!5e0!3m2!1sru!2sru!4v1595423004031!5m2!1sru!2sru"
-                            width="100%" height="213" frameborder="0" style="border: 0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        <div id="map" style="width: 100%; height: 100%;"></div>
                     </div>
                     <!-- /.map -->
                 </div>
