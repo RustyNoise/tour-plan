@@ -11,8 +11,8 @@
     <!-- Font Nunito-->
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=01158ef4-44ab-45e3-aafa-58ebd8c3e649&lang=ru_RU" type="text/javascript"></script>
-    <script type="text/javascript">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=01158ef4-44ab-45e3-aafa-58ebd8c3e649&lang=ru_RU"></script>
+    <script>
         // Функция ymaps.ready() будет вызвана, когда
         // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
         ymaps.ready(init);
@@ -29,6 +29,11 @@
                 // от 0 (весь мир) до 19.
                 zoom: 13,
             });
+            myMap.geoObjects.add(
+                new ymaps.Placemark([32.12509823, -80.79359886], {
+                    iconCaption: "Grand Hilton Hotel",
+                })
+            );
         }
     </script>
 </head>
