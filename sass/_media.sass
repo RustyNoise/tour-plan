@@ -12,6 +12,9 @@
   .card
     width: 230px
     height: 230px
+  .footer
+    &__input
+      flex-basis: 100%
 @media (max-width: 992px)
   .container,
   .newsletter-wrapper
@@ -59,6 +62,34 @@
   .card
     width: 340px
     height: 250px
+  .footer
+    &-wrapper
+      grid-template-columns: repeat(6, 1fr)
+      grid-row-gap: 40px
+    &__input
+      flex-basis: 49%
+    &__logo
+      grid-row: 1 / 2
+      grid-column: span 2
+    &__social
+      &-network
+        grid-row: 1 / 2
+        grid-column: span 4
+        align-self: center
+    &__categories
+      grid-row: 2 / 3
+      grid-column: span 2
+    &__legal
+      grid-column: span 2
+    &__additional
+      grid-column: span 2
+    &__contact
+      &-details
+        grid-column: span 5
+        grid-row: 3
+      &-form
+        grid-column: span 5
+        grid-row: 4
 @media (max-width: 768px)
   .container
     max-width: 576px
@@ -142,10 +173,17 @@
   .card
     width: 49%
     height: 255px
+  .footer
+    &__input
+      flex-basis: 100%
+    &-bottom
+      &-links
+        width: 100%
+        margin: 0 auto 0 0
+        text-align: inherit
 @media (max-width: 576px)
   .logo
     width: 99px
-
   .hotel
     &__slider
       margin-bottom: 20px
@@ -162,7 +200,47 @@
   &-slider
     &__item
       padding: 0 30px 36px
-
   .card
     width: 100%
-
+  .footer
+    padding-top: 69px
+    padding-bottom: 53px
+    &-wrapper
+      grid-template-columns: 1fr
+      margin-bottom: 30px
+    &__logo
+      grid-row: 1
+      grid-column: 1
+    &__social
+      &-network
+        grid-row: 2
+        grid-column: 1
+    &__additional
+      grid-row: 3
+      grid-column: 1
+    &__categories
+      grid-row: 4
+      grid-column: 1
+    &__legal
+      grid-row: 5
+      grid-column: 1
+    &__contact
+      &-details
+        grid-row: 6
+        grid-column: 1
+      &-form
+        grid-row: 7
+        grid-column: 1
+    &__input
+      order: -3
+    &__message
+      margin-bottom: 15px
+      order: -2
+    &__info
+      display: block
+      order: -1
+      flex-basis: 100%
+      margin-bottom: 15px
+    &__logos
+      left: 0
+      top: 28px
