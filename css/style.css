@@ -388,6 +388,10 @@ template {
   display: none;
 }
 
+.navbar-bottom--visible {
+  opacity: 0;
+}
+
 .navbar-bottom {
   background-color: #0A223D;
 }
@@ -1554,11 +1558,20 @@ template {
     border: none;
     background-color: #ffffff;
     cursor: pointer;
+    outline: none;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
   }
   .menu-button__line {
     width: 16px;
     height: 1px;
     background-color: #333333;
+  }
+  .button-animation {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
   }
   .user__name--light {
     color: #ffffff;

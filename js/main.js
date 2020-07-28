@@ -36,6 +36,7 @@ var reviewsSlider = new Swiper(".reviews-slider", {
 var menuButton = document.querySelector(".menu-button");
 menuButton.addEventListener('click', function() {
     console.log('Клик по кнопке');
+    document.querySelector(".menu-button").classList.toggle('button-animation')
     document.querySelector(".navbar-bottom").classList.toggle('navbar-bottom--visible');
     document.querySelector("body").classList.toggle('body--noscroll');
 })
