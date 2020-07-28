@@ -388,10 +388,6 @@ template {
   display: none;
 }
 
-.navbar-bottom--visible {
-  opacity: 0;
-}
-
 .navbar-bottom {
   background-color: #0A223D;
 }
