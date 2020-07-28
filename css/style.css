@@ -1528,6 +1528,12 @@ template {
   .navbar-menu__item--mobile--visible {
     display: block;
   }
+  .navbar-menu__item--mobile--visible--link {
+    margin-bottom: 27px;
+  }
+  .navbar-menu__item--mobile--visible--form {
+    margin-bottom: 39px;
+  }
   .menu-button {
     display: -webkit-box;
     display: -ms-flexbox;
