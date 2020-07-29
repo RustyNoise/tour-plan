@@ -229,6 +229,9 @@
         margin: 0 auto 0 0
         text-align: inherit
 @media (max-width: 576px)
+  .navbar
+    &-top
+      width: 100%
   .logo
     width: 99px
   .hotel
@@ -291,3 +294,13 @@
     &__logos
       left: 0
       top: 28px
+@media (max-width: 325px)
+  .footer
+    &__logos
+      position: static
+    &-bottom
+      &-links
+        margin-bottom: 10px
+    &__title
+      &--inline
+        margin-right: 20px

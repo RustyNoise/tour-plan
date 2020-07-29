@@ -1274,7 +1274,7 @@ template {
 
 .footer__message {
   resize: none;
-  max-width: 539px;
+  max-width: 580px;
   height: 123px;
   background-color: #fff;
   border-radius: 4px;
@@ -1676,6 +1676,9 @@ template {
 }
 
 @media (max-width: 576px) {
+  .navbar-top {
+    width: 100%;
+  }
   .logo {
     width: 99px;
   }
@@ -1777,6 +1780,18 @@ template {
   .footer__logos {
     left: 0;
     top: 28px;
+  }
+}
+
+@media (max-width: 325px) {
+  .footer__logos {
+    position: static;
+  }
+  .footer-bottom-links {
+    margin-bottom: 10px;
+  }
+  .footer__title--inline {
+    margin-right: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */
