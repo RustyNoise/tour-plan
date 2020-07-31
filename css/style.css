@@ -1297,6 +1297,7 @@ template {
   background-color: #EC1F46;
   border: none;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .footer__info {
@@ -1679,6 +1680,12 @@ template {
   .navbar-top {
     width: 100%;
   }
+  .navbar-menu {
+    padding: 0;
+  }
+  .navbar-menu__item--mobile--visible--form {
+    margin-bottom: 27px;
+  }
   .logo {
     width: 99px;
   }
@@ -1780,6 +1787,12 @@ template {
   .footer__logos {
     left: 0;
     top: 28px;
+  }
+}
+
+@media (max-width: 360px) {
+  .search__input {
+    width: 310px;
   }
 }
 

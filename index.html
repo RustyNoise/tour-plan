@@ -21,37 +21,7 @@
     <script src="https://api-maps.yandex.ru/2.1/?apikey=01158ef4-44ab-45e3-aafa-58ebd8c3e649&lang=ru_RU"></script>
     <!-- Yandex API Connection-->
 
-    <script>
-        // Функция ymaps.ready() будет вызвана, когда
-        // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
-        ymaps.ready(init);
 
-        function init() {
-            // Создание карты.
-            var myMap = new ymaps.Map("map", {
-                // Координаты центра карты.
-                // Порядок по умолчанию: «широта, долгота».
-                // Чтобы не определять координаты центра карты вручную,
-                // воспользуйтесь инструментом Определение координат.
-                center: [32.12509823, -80.79359886],
-                // Уровень масштабирования. Допустимые значения:
-                // от 0 (весь мир) до 19.
-                zoom: 13,
-            });
-            myMap.geoObjects.add(
-                new ymaps.Placemark([32.12509823, -80.79359886], {
-                    iconCaption: "Grand Hilton Hotel",
-                })
-            );
-        }
-    </script>
-    <!-- Initialization of Yandex API Map-->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <!-- jQuery Connection-->
-
-    <script src="js/parallax.min.js"></script>
-    <!-- Parallax Connection-->
 </head>
 
 <body>
@@ -255,9 +225,9 @@
                     Newsletter
                 </span>
             </h2>
-            <form action="#" class="subscribe newsletter-wrapper__subscribe">
-                <input type="text" class="subscribe__input" placeholder="Your email address" />
-                <button class="subscribe__button">
+            <form action="send.php" method="POST" class="subscribe newsletter-wrapper__subscribe">
+                <input type="text" class="subscribe__input" placeholder="Your email address" name="email" />
+                <button class="subscribe__button" type="submit">
                     Send
                 </button>
             </form>
@@ -557,10 +527,10 @@
                 <!-- /.footer__contact-details -->
                 <div class="footer__contact-form">
                     <h3 class="footer__title footer__title--mb-3">Send us a message</h3>
-                    <form action="#" class="footer__form">
-                        <input type="text" class="input footer__input" placeholder="Your full name*">
-                        <input type="text" class="input footer__input" placeholder="Phone number*">
-                        <textarea cols="10" rows="10" class="footer__message" placeholder="Message"></textarea>
+                    <form action="send.php" method="POST" class="footer__form">
+                        <input type="text" class="input footer__input" placeholder="Your full name*" name="name">
+                        <input type="text" class="input footer__input" placeholder="Phone number*" name="phone">
+                        <textarea class="footer__message" placeholder="Message" name="message"></textarea>
                         <button class="button footer__button" type="submit">Send</button>
                         <span class="footer__info">* Required Fields</span>
                     </form>
@@ -583,6 +553,13 @@
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/parallax-used.js"></script>
+    <script src="js/yandex-api.js"></script>
+    <!-- Initialization of Yandex API Map-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- jQuery Connection-->
+
+    <script src="js/parallax.min.js"></script>
+    <!-- Parallax Connection-->
 </body>
 
 </html>

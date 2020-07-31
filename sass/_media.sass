@@ -232,6 +232,13 @@
   .navbar
     &-top
       width: 100%
+    &-menu
+      padding: 0
+      &__item
+        &--mobile
+          &--visible
+            &--form
+              margin-bottom: 27px
   .logo
     width: 99px
   .hotel
@@ -294,6 +301,10 @@
     &__logos
       left: 0
       top: 28px
+@media (max-width: 360px)
+  .search
+    &__input
+      width: 310px
 @media (max-width: 325px)
   .footer
     &__logos
