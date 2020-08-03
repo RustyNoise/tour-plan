@@ -25,11 +25,23 @@ if ($email == null) {
   <b>Сообщение:</b><br>$message
 ";
 } else {
+  if(($name == null) & ($phone == null) & ($message == null)) {
   $title = "Новая подписка на рассылку: Best Tour Plan";
   $body = "
   <h2>Заявка на подписку с почты:</h2><br><br>
   <b>E-mail:</b> $email
 ";
+  }
+  else {
+    $title = "Обращение из модального окна: Best Tour Plan";
+  $body = "
+  <h2>Новое обращение</h2><br>
+  <b>Имя:</b> $name<br>
+  <b>Телефон:</b> $phone<br>
+  <b>E-mail:</b> $email<br><br>
+  <b>Сообщение:</b><br>$message<br>
+";
+  }
 }
 
 
@@ -71,5 +83,10 @@ else {$result = "error";}
 if ($email == null) {
   header('Location: thankyou.html');
 } else {
+  if (($name == null) & ($phone == null) & ($message == null)) {
   header('Location: subscribe.html');
+  }
+  else {
+    header('Location: request.html');
+  }
 }
