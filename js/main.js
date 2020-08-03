@@ -100,5 +100,6 @@ $(document).ready(function () {
       },
     });
   });
-  $(".phone__mask").mask("+7 (000) 000-00-00");
+  $(".footer__input-phone__mask").mask("+7 (000) 000-00-00");
+  $(".modal__input-phone__mask").mask("+7 (000) 000-00-00");
 });
