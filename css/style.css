@@ -682,6 +682,10 @@ template {
   background-image: url(../img/arrow-prev.svg);
 }
 
+.map__google {
+  width: 100%;
+}
+
 .stars {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
@@ -856,6 +860,10 @@ template {
 .newsletter {
   position: relative;
   padding: 98px 0 87px 0;
+  background-image: url(../img/newsletter-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .newsletter::before {
@@ -906,7 +914,6 @@ template {
   width: 350px;
   height: 55px;
   border-radius: 4px;
-  overflow: hidden;
 }
 
 .subscribe__input {
@@ -920,6 +927,7 @@ template {
   font-weight: 300;
   font-size: 14px;
   line-height: 18px;
+  border-radius: 4px;
 }
 
 .subscribe__button {
@@ -932,7 +940,14 @@ template {
   border: none;
   background-color: #EC1F46;
   color: #ffffff;
+  border-radius: 0 4px 4px 0;
   cursor: pointer;
+}
+
+#email-error {
+  position: relative;
+  z-index: 98;
+  top: 55px;
 }
 
 .reviews {
@@ -1238,27 +1253,14 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-
-.footer__form-bottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .footer__ul {
@@ -1321,22 +1323,10 @@ template {
 }
 
 .footer__input-group {
-  margin-bottom: 15px;
+  position: relative;
+  margin-bottom: 26px;
   -ms-flex-preferred-size: 48%;
       flex-basis: 48%;
-}
-
-.footer__input-group-container {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .footer__message {
@@ -1377,6 +1367,20 @@ template {
   position: absolute;
   right: 0;
   top: 0;
+}
+
+#nameFooter-error {
+  position: absolute;
+  top: 51px;
+  left: 2px;
+  font-size: 15px;
+}
+
+#phoneFooter-error {
+  position: absolute;
+  top: 51px;
+  left: 2px;
+  font-size: 15px;
 }
 
 .modal__overlay {
@@ -1444,13 +1448,13 @@ template {
   margin-top: 15px;
 }
 
-.modal__input:first-child {
-  margin-top: 0;
-}
-
 .modal__message {
   width: 100%;
   min-height: 123px;
+  margin-top: 15px;
+}
+
+.modal__button {
   margin-top: 15px;
 }
 
@@ -1464,7 +1468,6 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 15px;
 }
 
 .modal__info {
@@ -1569,8 +1572,8 @@ template {
     grid-row-gap: 40px;
   }
   .footer__input-group {
-    -ms-flex-preferred-size: 48%;
-        flex-basis: 48%;
+    -ms-flex-preferred-size: 49%;
+        flex-basis: 49%;
   }
   .footer__logo {
     -ms-grid-row: 1;
@@ -1906,22 +1909,16 @@ template {
     -ms-grid-column: 1;
     grid-column: 1;
   }
-  .footer__input-group {
-    -webkit-box-ordinal-group: -2;
-        -ms-flex-order: -3;
-            order: -3;
-  }
   .footer__message {
     margin-bottom: 15px;
-    -webkit-box-ordinal-group: -1;
-        -ms-flex-order: -2;
-            order: -2;
+  }
+  .footer__button {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
   }
   .footer__info {
     display: block;
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     margin-bottom: 15px;
@@ -1929,15 +1926,6 @@ template {
   .footer__logos {
     left: 0;
     top: 28px;
-  }
-  .footer__form-bottom {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
   }
   .modal__dialog {
     min-width: 0;

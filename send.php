@@ -4,11 +4,6 @@ require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 
-if(isset($_POST['footer__form'])) {
-
-} elseif(isset($_POST['button2'])) {
-    echo 'Нажата была кнопка с именем button2';
-}
 // Переменные, которые отправляет пользователь
 $name = $_POST['name'];
 $phone = $_POST['phone'];

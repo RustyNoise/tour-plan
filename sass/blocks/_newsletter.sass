@@ -1,6 +1,10 @@
 .newsletter
   position: relative
   padding: 98px 0 87px 0
+  background-image: url(../img/newsletter-bg.jpg)
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
   &::before
     content: ''
     position: absolute
@@ -35,7 +39,7 @@
   width: 350px
   height: 55px
   border-radius: 4px
-  overflow: hidden
+  //overflow: hidden
   &__input
     position: absolute
     width: 100%
@@ -47,6 +51,7 @@
     font-weight: 300
     font-size: 14px
     line-height: 18px
+    border-radius: 4px
   &__button
     position: absolute
     top: 0
@@ -57,5 +62,9 @@
     border: none
     background-color: $primary
     color: $light
+    border-radius: 0 4px 4px 0
     cursor: pointer
-
+#email-error
+  position: relative
+  z-index: 98
+  top: 55px

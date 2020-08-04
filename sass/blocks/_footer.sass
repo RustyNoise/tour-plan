@@ -33,14 +33,9 @@
       grid-column: span 2
   &__form
     display: flex
-    align-items: start
+    align-items: center
     justify-content: space-between
     flex-wrap: wrap 
-    &-bottom
-      display: flex
-      justify-content: space-between
-      width: 100%
-      align-items: center
   &__ul
     padding: 0
     margin: 0
@@ -78,13 +73,9 @@
   &__input
     width: 100%
     &-group
-      margin-bottom: 15px
+      position: relative
+      margin-bottom: 26px
       flex-basis: 48%
-      &-container
-        flex-basis: 100%
-        display: flex
-        flex-wrap: nowrap
-        justify-content: space-between
   &__message
     flex-basis: 100%
     margin-bottom: 22px
@@ -112,4 +103,13 @@
     position: absolute
     right: 0
     top: 0
-      
+#nameFooter-error
+  position: absolute
+  top: 51px
+  left: 2px
+  font-size: 15px
+#phoneFooter-error
+  position: absolute
+  top: 51px
+  left: 2px
+  font-size: 15px

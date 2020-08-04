@@ -18,8 +18,8 @@
     <link rel="stylesheet" href="css/style.css" />
     <!-- Stylesheets connection-->
 
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=01158ef4-44ab-45e3-aafa-58ebd8c3e649&lang=ru_RU"></script>
-    <!-- Yandex API Connection-->
+    <link rel="stylesheet" href="css/aos.css" />
+    <!-- Animation on scroll connection-->
 </head>
 
 <body>
@@ -120,7 +120,7 @@
     <section class="hotel">
         <div class="container">
             <div class="hotel-info">
-                <div class="hotel-info__text">
+                <div class="hotel-info__text" data-aos="fade-left">
                     <div class="hotel-wrapper">
                         <div class="stars">
                             <img src="img/star.svg" alt="star" />
@@ -137,7 +137,7 @@
                     </p>
                 </div>
                 <!-- /.hotel-info__text -->
-                <div class="rating hotel-info__rating">
+                <div class="rating hotel-info__rating" data-aos="fade-right">
                     <span class="rating__text">User Ratings</span>
                     <span class="rating__counter">4.5/5</span>
                 </div>
@@ -207,7 +207,8 @@
                     </div>
                     <!-- /.booking -->
                     <div class="map">
-                        <div id="map" style="width: 100%; height: 100%;"></div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.0412755651473!2d98.29254205098464!3d7.890750807918165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30503b7bfcd9f903%3A0xf7065fac1e3d7c48!2sDoubleTree%20by%20Hilton%20Phuket%20Banthai%20Resort!5e0!3m2!1sen!2s!4v1596215493146!5m2!1sen!2s"
+                            height="213" style="border: 0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="map__google"></iframe>
                     </div>
                     <!-- /.map -->
                 </div>
@@ -217,15 +218,15 @@
         </div>
         <!-- /.container -->
     </section>
-    <section class="newsletter parallax-window" data-speed="0.1" data-parallax="scroll" data-image-src="/img/newsletter-bg.jpg">
+    <section class="newsletter">
         <div class="newsletter-wrapper">
-            <h2 class="newsletter-title newsletter__title">
+            <h2 class="newsletter-title newsletter__title" data-aos="fade-right">
                 subscribe to our
                 <span class="newsletter-title__strong">
             Newsletter
           </span>
             </h2>
-            <form action="send.php" method="POST" class="subscribe newsletter-wrapper__subscribe form">
+            <form action="send.php" method="POST" class="subscribe newsletter-wrapper__subscribe" data-aos="fade-right">
                 <input type="email" class="subscribe__input" placeholder="Your email address" name="email" />
                 <button class="subscribe__button" type="submit">
             Send
@@ -237,7 +238,9 @@
     <!-- /.section newsletter-->
     <section class="reviews">
         <div class="container">
-            <h2 class="reviews__title">What people think about us</h2>
+            <h2 class="reviews__title" data-aos="fade-down">
+                What people think about us
+            </h2>
             <div class="swiper-container reviews-slider">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -429,44 +432,60 @@
       <div class="container">
         <h2 class="activities__title">Other activities</h2>
         <div class="activities-wrapper">
-          <div class="card activities__card">
+          <div
+            class="card activities__card"
+            data-aos="fade-right"
+            data-aos-delay="100"
+          >
             <img
               src="img/activity-1.jpg"
               alt="The curious corner of chamarel"
               class="card__image"
             />
             <h3 class="card__title">The curious corner of chamarel</h3>
-            <button class="card__button">Book Now</button>
+            <button data-toggle="modal" class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
-          <div class="card activities__card">
+          <div
+            class="card activities__card"
+            data-aos="fade-right"
+            data-aos-delay="200"
+          >
             <img
               src="img/activity-2.jpg"
               alt="Gymkhana club golf course"
               class="card__image"
             />
             <h3 class="card__title">Gymkhana club golf course</h3>
-            <button class="card__button">Book Now</button>
+            <button data-toggle="modal" class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
-          <div class="card activities__card">
+          <div
+            class="card activities__card"
+            data-aos="fade-right"
+            data-aos-delay="300"
+          >
             <img
               src="img/activity-3.jpg"
               alt="Tamarind falls hiking trip - full day"
               class="card__image"
             />
             <h3 class="card__title">Tamarind falls hiking trip - full day</h3>
-            <button class="card__button">Book Now</button>
+            <button data-toggle="modal" class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
-          <div class="card activities__card">
+          <div
+            class="card activities__card"
+            data-aos="fade-right"
+            data-aos-delay="400"
+          >
             <img
               src="img/activity-4.jpg"
               alt="The blue marine discovery quest"
               class="card__image"
             />
             <h3 class="card__title">The blue marine discovery quest</h3>
-            <button class="card__button">Book Now</button>
+            <button data-toggle="modal" class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
         </div>
@@ -617,70 +636,43 @@
           <!-- /.footer__contact-details -->
           <div class="footer__contact-form">
             <h3 class="footer__title footer__title--mb-3">Send us a message</h3>
-            <form action="send.php" method="POST" class="footer__form form">
-<<<<<<< HEAD
+            <form action="send.php" method="POST" class="footer__form">
               <div class="footer__input-group">
                 <input
                   type="text"
                   class="input footer__input"
                   placeholder="Your full name*"
-                  name="name"
-                  minlength="2"
+                  name="nameFooter"
                   required
+                  minlength="2"
                 />
               </div>
               <div class="footer__input-group">
                 <input
                   type="tel"
-                  class="input footer__input footer__input-phone__mask"
+                  class="input footer__input"
                   placeholder="Phone number*"
-                  name="phone"
+                  name="phoneFooter"
                   required
                 />
-=======
-              <div class="footer__input-group-container">
-                <div class="footer__input-group">
-                  <input
-                    type="text"
-                    class="input footer__input"
-                    placeholder="Your full name*"
-                    name="name"
-                    minlength="2"
-                    required
-                  />
-                </div>
-                <div class="footer__input-group">
-                  <input
-                    type="tel"
-                    class="input footer__input phone__mask"
-                    placeholder="Phone number*"
-                    name="phone"
-                    required
-                  />
-                </div>
->>>>>>> 95a9bcdd45dd20c15d5e590486bea1ee12e7bcec
               </div>
               <textarea
                 class="message footer__message"
                 placeholder="Message"
                 name="message"
               ></textarea>
-              <div class="footer__form-bottom">
-                <button class="button footer__button" type="submit">
-                  Send
-                </button>
-                <span class="footer__info">* Required Fields</span>
+              <button class="button footer__button" type="submit">Send</button>
+              <span class="footer__info">* Required Fields</span>
+                                </form>
                             </div>
-                            </form>
+                            <!-- /.footer__contact-form -->
                         </div>
-                        <!-- /.footer__contact-form -->
-                    </div>
-                    <!-- /.footer-wrapper -->
-                    <div class="footer-bottom">
-                        <div class="footer-bottom-links">
-                            <a href="#" class="footer-bottom__link">Disclaimer</a>
-                            <a href="#" class="footer-bottom__link">Conditions of use</a>
-                            <a href="#" class="footer-bottom__link">Cancellation&nbsp; policy</a
+                        <!-- /.footer-wrapper -->
+                        <div class="footer-bottom">
+                            <div class="footer-bottom-links">
+                                <a href="#" class="footer-bottom__link">Disclaimer</a>
+                                <a href="#" class="footer-bottom__link">Conditions of use</a>
+                                <a href="#" class="footer-bottom__link">Cancellation&nbsp; policy</a
             >
           </div>
           <!-- /.footer-bottom-links -->
@@ -696,35 +688,29 @@
         <a data-toggle="modal-close" href="#" class="modal__close">
           <img src="img/close.svg" alt="Icon: close" />
         </a>
-                            <h3 class="modal__title modal__title--mb-3">Send us a message</h3>
-                            <form action="send.php" method="POST" class="modal__form form">
-                                <input type="text" class="input modal__input" placeholder="Your full name*" name="name" required minlength="2" />
-                                <input type="tel" class="input modal__input modal__input-phone__mask" placeholder="Phone number*" name="phone" required />
-                                <input type="email" class="input modal__input" placeholder="Email*" name="email" required />
-                                <textarea class="message modal__message" placeholder="Message" name="message"></textarea>
-                                <div class="modal-bottom">
-                                    <button class="button modal__button" type="submit">Send</button>
-                                    <span class="modal__info">* Required Fields</span>
-                                </div>
-                                <!-- /.modal-bottom -->
-                            </form>
+                                <h3 class="modal__title modal__title--mb-3">Send us a message</h3>
+                                <form action="send.php" method="POST" class="modal__form">
+                                    <input type="text" class="input modal__input" placeholder="Your full name*" name="name" required minlength="2" />
+                                    <input type="tel" class="input modal__input" placeholder="Phone number*" name="phone" required />
+                                    <input type="email" class="input modal__input" placeholder="Email*" name="emailModal" required />
+                                    <textarea class="message modal__message" placeholder="Message" name="message"></textarea>
+                                    <div class="modal-bottom">
+                                        <button class="button modal__button" type="submit">Send</button>
+                                        <span class="modal__info">* Required Fields</span>
+                                    </div>
+                                    <!-- /.modal-bottom -->
+                                </form>
+                            </div>
+                            <!-- /.modal__dialog -->
                         </div>
-                        <!-- /.modal__dialog -->
-                    </div>
-                    <!-- /.modal -->
-                    <script src="js/jquery-3.5.1.min.js"></script>
-                    <!-- jQuery Connection-->
-                    <script src="js/swiper-bundle.min.js"></script>
-                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-                    <!-- jQuery for Parallax-->
-                    <script src="js/parallax.min.js"></script>
-                    <script src="js/parallax-used.js"></script>
-                    <!-- Parallax Connection-->
-                    <script src="js/yandex-api.js"></script>
-                    <!-- Initialization of Yandex API Map-->
-                    <script src="js/jquery.validate.min.js"></script>
-                    <script src="js/jquery.mask.min.js"></script>
-                    <script src="js/main.js"></script>
+                        <!-- /.modal -->
+                        <script src="js/jquery-3.5.1.min.js"></script>
+                        <!-- jQuery Connection-->
+                        <script src="js/jquery.validate.min.js"></script>
+                        <script src="js/jquery.mask.min.js"></script>
+                        <script src="js/swiper-bundle.min.js"></script>
+                        <script src="js/aos.js"></script>
+                        <script src="js/main.js"></script>
 </body>
 
 </html>
